@@ -153,3 +153,5 @@ Seluruh data portofolio dirancang agar **sangat mudah diubah dari satu tempat**:
 ### Opsi B: Vercel / Netlify
 Tinggal *drag-and-drop* folder `porto` ke dashboard [Netlify Drop](https://app.netlify.com/drop) atau sambungkan repositori GitHub Anda ke [Vercel](https://vercel.com).
 
+#   p o r t o f o l i o  
+ 
