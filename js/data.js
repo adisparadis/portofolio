@@ -7,7 +7,7 @@
 const portfolioData = {
   // 1. DATA DIRI & INFORMASI UTAMA
   profile: {
-    name: "Muhammad Asror",
+    name: "Asrorul Faradis",
     role: "Pembelajar IT | DevOps & Keamanan Dasar",
     tagline: "Membangun Fondasi Infrastruktur yang Otomatis, Andal, dan Aman",
     bio: "Halo! Saya adalah seorang pembelajar IT yang berfokus pada administrasi sistem, otomasi infrastruktur (DevOps), serta dasar keamanan sistem informasi. Portofolio ini mendokumentasikan proyek langsung, lab simulasi, dan catatan perjalanan belajar saya dari fondasi web hingga otomasi server.",
