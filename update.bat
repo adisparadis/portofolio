@@ -17,3 +17,4 @@ echo  Cek perubahannya dalam 1 menit di:
 echo  https://adisparadis.github.io/portofolio/
 echo ==========================================
 pause
+
