@@ -7,7 +7,7 @@
 
 const portfolioData = {
   profile: {
-    name: "Muhammad Asror",
+    name: "Asrorul Faradis",
     role: "Pengembang IT | DevOps & Keamanan Dasar",
     telemetryStatus: "SISTEM NORMAL // TERBUKA UNTUK DISKUSI & MAGANG",
     statement: "Membangun Fondasi Infrastruktur yang Otomatis, Andal, dan Aman. Menolak konfigurasi manual yang rawan inkonsistensi.",
