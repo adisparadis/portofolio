@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgAnsible" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EE0000"/>
+      <stop offset="100%" stop-color="#165DFF"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="340" rx="12" fill="url(#bgAnsible)"/>
+  
+  <!-- Subtle Grid -->
+  <pattern id="gridPattern" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#334155" stroke-width="0.5" stroke-opacity="0.4"/>
+  </pattern>
+  <rect width="600" height="340" fill="url(#gridPattern)" />
+
+  <!-- Title Pill -->
+  <rect x="30" y="25" width="220" height="32" rx="6" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <circle cx="48" cy="41" r="5" fill="#EE0000"/>
+  <text x="62" y="46" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">Ansible Automation Architecture</text>
+
+  <!-- Control Node Card -->
+  <rect x="40" y="90" width="160" height="180" rx="10" fill="#0F172A" stroke="#EE0000" stroke-width="2"/>
+  <rect x="40" y="90" width="160" height="32" rx="10" fill="#EE0000" fill-opacity="0.15"/>
+  <circle cx="56" cy="106" r="4" fill="#EE0000"/>
+  <text x="68" y="110" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" fill="#FCA5A5">CONTROL NODE</text>
+  <text x="56" y="145" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94A3B8">playbook.yml</text>
+  <text x="56" y="168" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94A3B8">inventory.ini</text>
+  <text x="56" y="191" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94A3B8">roles/nginx/</text>
+  <rect x="52" y="215" width="136" height="38" rx="6" fill="#1E293B"/>
+  <text x="60" y="232" font-family="'JetBrains Mono', monospace" font-size="9" fill="#38EF7D">$ ansible-playbook</text>
+  <text x="60" y="244" font-family="'JetBrains Mono', monospace" font-size="9" fill="#38EF7D">  -i hosts site.yml</text>
+
+  <!-- Connection Lines (SSH) -->
+  <path d="M 200 150 L 370 115" stroke="url(#lineGrad)" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <path d="M 200 210 L 370 245" stroke="url(#lineGrad)" stroke-width="2.5" stroke-dasharray="6,4"/>
+  
+  <!-- SSH Badges on lines -->
+  <rect x="255" y="118" width="60" height="20" rx="4" fill="#0B132B" stroke="#165DFF" stroke-width="1"/>
+  <text x="267" y="132" font-family="'JetBrains Mono', monospace" font-size="9" fill="#60A5FA">SSH:22</text>
+  <rect x="255" y="212" width="60" height="20" rx="4" fill="#0B132B" stroke="#165DFF" stroke-width="1"/>
+  <text x="267" y="226" font-family="'JetBrains Mono', monospace" font-size="9" fill="#60A5FA">SSH:22</text>
+
+  <!-- Managed Node 1 (Web 01) -->
+  <rect x="370" y="65" width="190" height="105" rx="10" fill="#0F172A" stroke="#165DFF" stroke-width="1.5"/>
+  <rect x="370" y="65" width="190" height="26" rx="10" fill="#165DFF" fill-opacity="0.15"/>
+  <circle cx="385" cy="78" r="4" fill="#10B981"/>
+  <text x="396" y="82" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" fill="#93C5FD">MANAGED: web-01</text>
+  <text x="385" y="110" font-family="'Inter', sans-serif" font-size="10" fill="#CBD5E1">OS: Ubuntu 24.04 LTS</text>
+  <text x="385" y="128" font-family="'Inter', sans-serif" font-size="10" fill="#CBD5E1">Status: Nginx Running [Port 80]</text>
+  <text x="385" y="146" font-family="'JetBrains Mono', monospace" font-size="9" fill="#34D399">✓ UFW Active: 22,80,443</text>
+
+  <!-- Managed Node 2 (Web 02) -->
+  <rect x="370" y="190" width="190" height="105" rx="10" fill="#0F172A" stroke="#165DFF" stroke-width="1.5"/>
+  <rect x="370" y="190" width="190" height="26" rx="10" fill="#165DFF" fill-opacity="0.15"/>
+  <circle cx="385" cy="203" r="4" fill="#10B981"/>
+  <text x="396" y="207" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" fill="#93C5FD">MANAGED: web-02</text>
+  <text x="385" y="235" font-family="'Inter', sans-serif" font-size="10" fill="#CBD5E1">OS: Ubuntu 24.04 LTS</text>
+  <text x="385" y="253" font-family="'Inter', sans-serif" font-size="10" fill="#CBD5E1">Status: Nginx Running [Port 80]</text>
+  <text x="385" y="271" font-family="'JetBrains Mono', monospace" font-size="9" fill="#34D399">✓ UFW Active: 22,80,443</text>
+
+  <!-- Status Bar at bottom -->
+  <rect x="30" y="295" width="540" height="28" rx="6" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <circle cx="50" cy="309" r="4" fill="#10B981"/>
+  <text x="62" y="313" font-family="'JetBrains Mono', monospace" font-size="10" fill="#E2E8F0">PLAY RECAP: ok=2    changed=2    unreachable=0    failed=0</text>
+</svg>
+
