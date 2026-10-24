@@ -365,3 +365,4 @@ find /var/backups -name "*.gpg" -type f -mtime +7 -delete`
     }
   ]
 };
+

@@ -1,9 +1,8 @@
 @echo off
 echo ==========================================
-echo    MENJALANKAN NEXT.JS PORTOFOLIO DEV
+echo    MEMBUKA PORTOFOLIO IT SECARA LOKAL
 echo ==========================================
 echo.
 cd /d "%~dp0"
-echo Membuka server di http://localhost:3000 ...
-pnpm.cmd dev
-pause
+echo Membuka index.html di peramban browser...
+start "" index.html

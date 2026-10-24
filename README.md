@@ -6,11 +6,11 @@ Website portofolio pengembang IT modern, berkinerja tinggi, dan langsung terdete
 
 ## 🎨 Karakteristik Desain & UI-UX (Anti-Template AI)
 
-* **Palet Warna Utama:** Abu-abu tua (`#2A2A2A`), Biru tua (`#0F3460`), Aksen hijau lembut (`#2E7D32`).
-* **Tipografi:** Font Inter (teks bacaan) & JetBrains Mono (terminal & kode).
-* **Tata Letak Asimetris:** Slot kartu proyek unggulan mengambil ruang lebih besar (2 kolom) untuk menonjolkan metrik teknis dan topologi alur sistem, memecah pola kartu simetris AI yang monoton.
-* **Perpaduan Sudut:** Blok kode dan badge memakai **sudut tajam murni (`rounded-none`)**, sedangkan kartu proyek memakai **sudut sedikit bulat (`rounded-md` / 6px)**.
-* **Bukan Ilustrasi Hiasan AI:** Seluruh ilustrasi menggunakan diagram arsitektur vektor sistem nyata (Ansible, Active Directory, Linux Bash).
+- **Palet Warna Utama:** Abu-abu tua (`#2A2A2A`), Biru tua (`#0F3460`), Aksen hijau lembut (`#2E7D32`).
+- **Tipografi:** Font Inter (teks bacaan) & JetBrains Mono (terminal & kode).
+- **Tata Letak Asimetris:** Slot kartu proyek unggulan mengambil ruang lebih besar (2 kolom) untuk menonjolkan metrik teknis dan topologi alur sistem, memecah pola kartu simetris AI yang monoton.
+- **Perpaduan Sudut:** Blok kode dan badge memakai **sudut tajam murni (`rounded-none`)**, sedangkan kartu proyek memakai **sudut sedikit bulat (`rounded-md` / 6px)**.
+- **Bukan Ilustrasi Hiasan AI:** Seluruh ilustrasi menggunakan diagram arsitektur vektor sistem nyata (Ansible, Active Directory, Linux Bash).
 
 ---
 
