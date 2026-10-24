@@ -1,157 +1,131 @@
-# 🌐 Portofolio IT & DevOps Enthusiast
+# 🌐 Portofolio IT — Next.js Monorepo (pnpm Workspaces)
 
-Web Portofolio IT modern, ringan (*ultra-fast*), dan 100% responsif yang dirancang khusus untuk pembelajar IT, calon *System Administrator*, *DevOps Engineer*, dan *Cloud/Security Enthusiast*.
-
-Website ini dibangun menggunakan **HTML5 semantik, CSS3 modern dengan custom variable & grid**, serta **Vanilla JavaScript modular** tanpa dependensi berat (tanpa framework yang membengkak), sehingga menghasilkan performa muat secepat kilat (*PageSpeed 99+*), ramah kuota, dan dapat langsung dibuka di ponsel maupun laptop.
+Portofolio pengembang IT modern berarsitektur **monorepo pnpm workspaces** dengan **Next.js 14 App Router**, desain non-simetris bebas template AI, dan performa tinggi.
 
 ---
 
-## ✨ Fitur-Fitur Utama yang Telah Diimplementasikan
-
-### 1. 🏠 Halaman Beranda (Landing Page)
-- **Judul Utama & Posisi:** Menampilkan nama + posisi (*"Muhammad Asror | Pembelajar IT | DevOps & Keamanan Dasar"*).
-- **Kalimat Pembuka & Bio Teknis:** Penjelasan siapa Anda, keahlian yang sedang difokuskan, dan tujuan pembuatan portofolio.
-- **Tombol Pintas Navigasi:** Urutan tombol cepat: `Lihat Proyek` ➔ `Keahlian` ➔ `Hubungi Saya`.
-- **Animasi Ringkas Ikon IT:** Floating subtle animation untuk ikon teknologi (*Server*, *Code*, *Cloud*, *Shield*, *Terminal*) yang bergerak pelan dan elegan tanpa membebani performa perangkat.
-- **Mode Gelap / Terang (Dark / Light Mode Toggle):** Terletak di pojok kanan atas navbar sticky. Menggunakan palet teknis:
-  - **Tema Terang:** Biru Tua (`#0F3460`), abu-abu muda (`#F4F6F9`), dan putih bersih (`#FFFFFF`).
-  - **Tema Gelap:** Hitam keabu-abuan (`#0D1117` / `#161B22`) dengan aksen biru terang IT (`#165DFF`).
-  - Pilihan tema otomatis tersimpan di `localStorage` peramban.
-
-### 2. 👤 Halaman Tentang Saya
-- **Foto Profil Teknis & Status Badge:** Avatar IT vector tajam lengkap dengan indikator status online/kolaborasi.
-- **Ringkasan Latar Belakang:** Kapan mulai belajar IT dan fokus area sistem.
-- **Kartu Alasan Suka IT:** 3 pilar ketertarikan (Kekuatan Otomasi, Seni Troubleshooting, Keamanan Berkelanjutan).
-- **Roadmap / Perjalanan Belajar Bertahap:**
-  - *Tahap 1:* Fondasi Komputer & Web Dasar (HTML, CSS, JS, OSI Layer, Subnetting)
-  - *Tahap 2:* Sistem Operasi Linux & Shell Scripting (Ubuntu, SSH, Bash)
-  - *Tahap 3:* Otomasi Konfigurasi dengan Ansible (Playbook, Idempotency, Multi-node)
-  - *Tahap 4:* Active Directory & Keamanan Dasar (Windows Server 2022, GPO, UFW)
-  - *Tahap 5:* Containerization & CI/CD Pipeline (Docker & GitHub Actions)
-
-### 3. 🚀 Halaman Proyek (Inti Portofolio)
-- **Kartu Proyek Komprehensif:**
-  - Tangkapan layar / Diagram arsitektur sistem vector (*Ansible Orchestration*, *AD DS Domain Forest*, *Linux Hardening Script*, *Subnet Calculator CLI*, *Cloud Encrypted Backup*).
-  - Badge kategori (*DevOps*, *Keamanan*, *Skrip Otomatis*, *Web*).
-  - Penjelasan tujuan, poin hasil (*highlights*), dan pil teknologi (*tech stack tags*).
-  - Tombol aksi: **Detail Sistem** (membuka modal interaktif diagram alur) dan **Lihat Kode** (tautan GitHub).
-- **Fitur Tambahan Proyek:**
-  - ✅ **Pencarian Real-Time:** Cari proyek berdasarkan nama, teknologi, atau konsep langsung saat mengetik.
-  - ✅ **Filter Kategori:** Tab filter *Semua*, *DevOps*, *Keamanan*, *Skrip Otomatis*, dan *Web*.
-  - ✅ **Urutkan Proyek:** Dropdown sortir *Terbaru Dulu*, *Terlama Dulu*, dan *Nama (A-Z)*.
-  - ✅ **Counter Otomatis:** Menampilkan jumlah proyek yang cocok dengan filter.
-
-### 4. ⚡ Halaman Keahlian (Skills) & Sertifikat
-- **Matriks Keahlian Berjenjang:**
-  - Indikator level: **Dasar**, **Menengah**, dan **Sedang Dipelajari**.
-  - Meteran persentase visual dan deskripsi ringkas tiap keahlian (Ansible, Linux Admin, Active Directory, UFW Firewall, Git, Bash Scripting, HTML/CSS/JS, Jaringan Dasar, Docker).
-- **Galeri Sertifikat:**
-  - Kartu sertifikat rapi berisi nama sertifikat, lembaga penerbit, tahun kelulusan, dan Credential ID.
-  - **Fitur Zoom Lightbox:** Klik kartu sertifikat untuk memperbesar tampilan resolusi tinggi dan menyalin ID sertifikat dalam 1 klik.
-
-### 5. 📬 Halaman Kontak
-- **Formulir Interaktif:** Input Nama, Email, Kategori Topik, dan Pesan dengan validasi dan notifikasi toast sukses instan.
-- **Catatan SLA Waktu Respon:** Banner pengingat resmi: *“Saya akan balas pesan paling lambat 3 hari kerja”*.
-- **Tautan Langsung:** Tombol direct chat WhatsApp, tautan profil GitHub, dan koneksi LinkedIn.
-
-### 6. 📊 Fitur Tambahan: Ringkasan Aktivitas Belajar
-- Dashboard statistik mini:
-  - 160+ Jam Belajar & Hands-on Lab
-  - 6+ Proyek Teknis Selesai
-  - 4 Sertifikat & Ujian Kompetensi
-  - 12+ Modul & Catatan Praktik IT
-
-### 7. 📜 Fitur Tambahan: Catatan Belajar & Blog IT
-- Blog ringkasan teknis dengan modal reader berformat ramah baca:
-  1. *Dasar Ansible: Kenapa Idempotency Begitu Penting dalam Otomasi Server?*
-  2. *Langkah Demi Langkah: Membangun Lab Active Directory di VirtualBox*
-  3. *Checklist 5 Menit: Pengamanan Dasar (Hardening) Server Linux Baru*
-  4. *Mengenal Tool Esensial Troubleshooting Jaringan di Terminal (Ping, Traceroute, ss)*
-
----
-
-## 📁 Struktur Berkas Proyek
+## 📁 Struktur Monorepo
 
 ```text
-porto/
+porto/                           ← Root monorepo
 │
-├── index.html                   # Halaman tunggal utama (Semantic HTML5)
-├── README.md                    # Dokumentasi lengkap proyek
+├── apps/
+│   └── web/                     ← Aplikasi portofolio utama (Next.js 14)
+│       ├── src/
+│       │   ├── app/
+│       │   │   ├── page.tsx            → Beranda
+│       │   │   ├── tentang/page.tsx    → Tentang Saya & Timeline
+│       │   │   ├── proyek/page.tsx     → Indeks Proyek + Filter + Search
+│       │   │   ├── proyek/[slug]/      → Detail Proyek (Tantangan & Solusi)
+│       │   │   ├── keahlian/page.tsx   → Matriks Keahlian Teknis
+│       │   │   ├── kontak/page.tsx     → Formulir & Saluran Kontak
+│       │   │   ├── layout.tsx          → Root Layout (Navbar + Footer)
+│       │   │   └── globals.css         → Tailwind CSS + pola grid halus
+│       │   └── components/
+│       │       └── ProjectFilterSection.tsx  → Filter/Search interaktif
+│       ├── public/assets/images/       → SVG diagram proyek & sertifikat
+│       ├── tailwind.config.ts          → Palet warna teknis (#2A2A2A, #0F3460, #2E7D32)
+│       ├── next.config.mjs             → transpilePackages workspace
+│       └── package.json                → @porto/web
 │
-├── css/
-│   └── style.css                # CSS Variables, tema terang/gelap, layout responsif & animasi
+├── packages/
+│   ├── ui-komponen/                    ← Komponen UI yang dapat dipakai ulang
+│   │   └── src/
+│   │       ├── Button.tsx              → 5 varian tombol (rounded-none = sudut tajam)
+│   │       ├── ProjectCard.tsx         → Kartu featured (asimetris) & standard
+│   │       ├── CodeBlock.tsx           → Blok kode sudut tajam + tombol salin
+│   │       ├── SkillTag.tsx            → Label keahlian + deskripsi implementasi nyata
+│   │       ├── ThemeToggle.tsx         → Mode gelap/terang (flash-free)
+│   │       ├── Navbar.tsx              → Navbar sticky + hamburger mobile
+│   │       └── Footer.tsx              → Footer kolom teknis
+│   │
+│   └── util-bersama/                   ← Logic & Data murni (zero UI)
+│       └── src/
+│           ├── types.ts                → TypeScript interfaces (Project, Skill, dll)
+│           ├── data.ts                 ← ★ EDIT DI SINI untuk ubah konten ★
+│           ├── helpers.ts              → filterProjects(), formatIndoDate(), badge styles
+│           └── index.ts                → Barrel exports
 │
-├── js/
-│   ├── data.js                  # PUSAT DATA: Data diri, proyek, skill, sertifikat, & artikel
-│   └── app.js                   # Logic interaktif: Theme toggle, search, filter, modal, toast
-│
-└── assets/
-    ├── icons/                   # Tempat ikon pendukung tambahan
-    └── images/                  # Grafik SVG vektor tajam (Offline-ready, zero broken links)
-        ├── avatar.svg           # Foto profil IT
-        ├── project-ansible.svg  # Diagram arsitektur Ansible
-        ├── project-ad.svg       # Diagram arsitektur Active Directory
-        ├── project-bash.svg     # Tampilan terminal Linux Hardening
-        ├── project-portfolio.svg# Pratinjau responsif web
-        ├── project-network.svg  # Topologi subnet IPv4 CLI
-        ├── project-backup.svg   # Alur enkripsi backup cloud
-        ├── cert-linux.svg       # Sertifikat Linux Essentials
-        ├── cert-ansible.svg     # Sertifikat Ansible Automation
-        ├── cert-cisco.svg       # Sertifikat Cisco Networking
-        └── cert-ad.svg          # Sertifikat Windows Server AD
+├── pnpm-workspace.yaml                 ← Konfigurasi workspace pnpm
+├── vercel.json                         ← Konfigurasi deploy Vercel
+├── package.json                        ← Root scripts
+├── tsconfig.json                       ← TypeScript config root
+└── update.bat                          ← Skrip 1-klik push ke GitHub
 ```
 
 ---
 
-## 🚀 Cara Menjalankan Website Secara Lokal
+## ✏️ Cara Mengubah Konten Portofolio
 
-Website ini **tidak membutuhkan instalasi node modules yang rumit**. Anda bisa membukanya langsung:
+> **Cukup edit 1 file**: [`packages/util-bersama/src/data.ts`](packages/util-bersama/src/data.ts)
 
-### Cara 1: Buka Langsung di Peramban
-1. Buka folder `c:\Users\asror\Downloads\porto`.
-2. Klik dua kali pada berkas `index.html`.
-3. Website akan langsung terbuka di Google Chrome, Microsoft Edge, atau browser pilihan Anda.
+### Mengubah Data Diri:
+```typescript
+export const portfolioProfile: PortfolioProfile = {
+  name: "Nama Lengkap Anda",
+  role: "Jabatan / Posisi",
+  email: "email@anda.com",
+  whatsapp: "6281234567890",
+  github: "https://github.com/username-anda",
+  linkedin: "https://linkedin.com/in/username-anda",
+  // ...
+};
+```
 
-### Cara 2: Menggunakan Python Local Server (Opsional)
-Jalankan perintah berikut di PowerShell atau Command Prompt:
+### Menambah Proyek Baru:
+```typescript
+export const portfolioProjects: Project[] = [
+  {
+    id: "p-7",
+    slug: "nama-url-proyek",         // URL: /proyek/nama-url-proyek
+    title: "Judul Proyek Anda",
+    category: "DevOps",              // DevOps | Web | Skrip Otomatis
+    status: "Selesai",
+    challenge: "Jelaskan masalah spesifik yang dihadapi...",
+    solution: "Jelaskan solusi dan keputusan arsitektur yang diambil...",
+    // ...
+  }
+];
+```
+
+---
+
+## 🚀 Menjalankan Secara Lokal
+
 ```powershell
-cd c:\Users\asror\Downloads\porto
-python -m http.server 8000
+# Install semua dependensi workspace
+pnpm install
+
+# Jalankan dev server
+pnpm dev
+# Buka: http://localhost:3000
 ```
-Lalu buka peramban di alamat: `http://localhost:8000`
+
+## 🏗️ Build Produksi
+
+```powershell
+pnpm build
+# Atau hanya untuk apps/web:
+pnpm --filter @porto/web build
+```
 
 ---
 
-## ✏️ Cara Mengubah Data Portofolio Anda
+## ☁️ Deploy ke Vercel
 
-Seluruh data portofolio dirancang agar **sangat mudah diubah dari satu tempat**: berkas **`js/data.js`**.
-
-- **Mengubah Nama & Biodata:** Buka `js/data.js` bagian `profile` (`name`, `role`, `bio`, `whatsapp`, `email`).
-- **Menambah / Mengubah Proyek:** Edit array `projects` di `js/data.js`. Anda dapat mengubah judul, kategori, deskripsi, teknologi, dan tautan GitHub.
-- **Menambah Keahlian:** Edit array `skills` di `js/data.js` dan sesuaikan tingkat kemampuan (`Dasar`, `Menengah`, `Sedang Dipelajari`).
-- **Menambah Sertifikat:** Edit array `certificates` di `js/data.js`.
-- **Menulis Catatan Belajar Baru:** Tambahkan objek baru ke dalam array `blogPosts` di `js/data.js`.
+`vercel.json` sudah dikonfigurasi. Cukup:
+1. Sambungkan repo GitHub ke [vercel.com](https://vercel.com)
+2. Klik **Deploy** — Vercel otomatis mendeteksi monorepo pnpm
 
 ---
 
-## 🌐 Cara Publikasi / Hosting Online Gratis
+## 🎨 Gaya Desain
 
-### Opsi A: GitHub Pages (Sangat Direkomendasikan untuk Portofolio IT)
-1. Buat repositori baru di akun GitHub Anda (misal: `portofolio-it`).
-2. Unggah seluruh isi folder ini ke repositori tersebut:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: IT Portfolio Website"
-   git branch -M main
-   git remote add origin https://github.com/USERNAME/portofolio-it.git
-   git push -u origin main
-   ```
-3. Buka repositori di GitHub ➔ masuk menu **Settings** ➔ **Pages** ➔ pilih Branch `main` ➔ klik **Save**.
-4. Website Anda akan aktif secara instan di: `https://USERNAME.github.io/portofolio-it/`.
-
-### Opsi B: Vercel / Netlify
-Tinggal *drag-and-drop* folder `porto` ke dashboard [Netlify Drop](https://app.netlify.com/drop) atau sambungkan repositori GitHub Anda ke [Vercel](https://vercel.com).
-
-#   p o r t o f o l i o  
- 
+| Elemen | Pilihan |
+|--------|---------|
+| **Palet Warna** | Abu-abu tua `#2A2A2A`, Biru tua `#0F3460`, Hijau lembut `#2E7D32` |
+| **Font** | Inter (Sans) + JetBrains Mono (Kode) |
+| **Kartu Proyek** | `rounded-md` (sedikit bulat) |
+| **Blok Kode** | `rounded-none` (sudut tajam teknis) |
+| **Tata Letak** | Asimetris — kartu featured mengambil 2 kolom, kartu lain 1 kolom |
+| **Dark Mode** | Toggle flash-free, tersimpan di `localStorage` |
