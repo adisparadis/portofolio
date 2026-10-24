@@ -1,131 +1,50 @@
-# 🌐 Portofolio IT — Next.js Monorepo (pnpm Workspaces)
+# 🌐 Portofolio IT — Desain Rekayasa Teknis & Native GitHub Pages
 
-Portofolio pengembang IT modern berarsitektur **monorepo pnpm workspaces** dengan **Next.js 14 App Router**, desain non-simetris bebas template AI, dan performa tinggi.
+Website portofolio pengembang IT modern, berkinerja tinggi, dan langsung terdeteksi di **GitHub Pages** (`adisparadis.github.io/portofolio/`) tanpa memerlukan server tambahan.
 
 ---
 
-## 📁 Struktur Monorepo
+## 🎨 Karakteristik Desain & UI-UX (Anti-Template AI)
+
+* **Palet Warna Utama:** Abu-abu tua (`#2A2A2A`), Biru tua (`#0F3460`), Aksen hijau lembut (`#2E7D32`).
+* **Tipografi:** Font Inter (teks bacaan) & JetBrains Mono (terminal & kode).
+* **Tata Letak Asimetris:** Slot kartu proyek unggulan mengambil ruang lebih besar (2 kolom) untuk menonjolkan metrik teknis dan topologi alur sistem, memecah pola kartu simetris AI yang monoton.
+* **Perpaduan Sudut:** Blok kode dan badge memakai **sudut tajam murni (`rounded-none`)**, sedangkan kartu proyek memakai **sudut sedikit bulat (`rounded-md` / 6px)**.
+* **Bukan Ilustrasi Hiasan AI:** Seluruh ilustrasi menggunakan diagram arsitektur vektor sistem nyata (Ansible, Active Directory, Linux Bash).
+
+---
+
+## 📁 Struktur Berkas
 
 ```text
-porto/                           ← Root monorepo
+porto/
 │
-├── apps/
-│   └── web/                     ← Aplikasi portofolio utama (Next.js 14)
-│       ├── src/
-│       │   ├── app/
-│       │   │   ├── page.tsx            → Beranda
-│       │   │   ├── tentang/page.tsx    → Tentang Saya & Timeline
-│       │   │   ├── proyek/page.tsx     → Indeks Proyek + Filter + Search
-│       │   │   ├── proyek/[slug]/      → Detail Proyek (Tantangan & Solusi)
-│       │   │   ├── keahlian/page.tsx   → Matriks Keahlian Teknis
-│       │   │   ├── kontak/page.tsx     → Formulir & Saluran Kontak
-│       │   │   ├── layout.tsx          → Root Layout (Navbar + Footer)
-│       │   │   └── globals.css         → Tailwind CSS + pola grid halus
-│       │   └── components/
-│       │       └── ProjectFilterSection.tsx  → Filter/Search interaktif
-│       ├── public/assets/images/       → SVG diagram proyek & sertifikat
-│       ├── tailwind.config.ts          → Palet warna teknis (#2A2A2A, #0F3460, #2E7D32)
-│       ├── next.config.mjs             → transpilePackages workspace
-│       └── package.json                → @porto/web
+├── index.html                   ← File utama yang langsung dibaca GitHub Pages
+├── update.bat                   ← Skrip 1-klik untuk upload update ke GitHub
+├── dev.bat                      ← Skrip 1-klik jalankan server lokal
 │
-├── packages/
-│   ├── ui-komponen/                    ← Komponen UI yang dapat dipakai ulang
-│   │   └── src/
-│   │       ├── Button.tsx              → 5 varian tombol (rounded-none = sudut tajam)
-│   │       ├── ProjectCard.tsx         → Kartu featured (asimetris) & standard
-│   │       ├── CodeBlock.tsx           → Blok kode sudut tajam + tombol salin
-│   │       ├── SkillTag.tsx            → Label keahlian + deskripsi implementasi nyata
-│   │       ├── ThemeToggle.tsx         → Mode gelap/terang (flash-free)
-│   │       ├── Navbar.tsx              → Navbar sticky + hamburger mobile
-│   │       └── Footer.tsx              → Footer kolom teknis
-│   │
-│   └── util-bersama/                   ← Logic & Data murni (zero UI)
-│       └── src/
-│           ├── types.ts                → TypeScript interfaces (Project, Skill, dll)
-│           ├── data.ts                 ← ★ EDIT DI SINI untuk ubah konten ★
-│           ├── helpers.ts              → filterProjects(), formatIndoDate(), badge styles
-│           └── index.ts                → Barrel exports
+├── css/
+│   └── style.css                ← Variabel warna, dark/light theme, tata letak asimetris
 │
-├── pnpm-workspace.yaml                 ← Konfigurasi workspace pnpm
-├── vercel.json                         ← Konfigurasi deploy Vercel
-├── package.json                        ← Root scripts
-├── tsconfig.json                       ← TypeScript config root
-└── update.bat                          ← Skrip 1-klik push ke GitHub
+├── js/
+│   ├── data.js                  ← ★ PUSAT KONTEN: Edit data diri, proyek, skill di sini ★
+│   └── app.js                   ← Logika filter kategori, search, modal tantangan & solusi
+│
+└── assets/
+    └── images/                  ← Vektor SVG diagram arsitektur sistem
 ```
 
 ---
 
-## ✏️ Cara Mengubah Konten Portofolio
+## ✏️ Cara Mengubah Data Portofolio
 
-> **Cukup edit 1 file**: [`packages/util-bersama/src/data.ts`](packages/util-bersama/src/data.ts)
+> Anda **hanya perlu mengedit 1 file**: [`js/data.js`](js/data.js)
 
-### Mengubah Data Diri:
-```typescript
-export const portfolioProfile: PortfolioProfile = {
-  name: "Nama Lengkap Anda",
-  role: "Jabatan / Posisi",
-  email: "email@anda.com",
-  whatsapp: "6281234567890",
-  github: "https://github.com/username-anda",
-  linkedin: "https://linkedin.com/in/username-anda",
-  // ...
-};
-```
-
-### Menambah Proyek Baru:
-```typescript
-export const portfolioProjects: Project[] = [
-  {
-    id: "p-7",
-    slug: "nama-url-proyek",         // URL: /proyek/nama-url-proyek
-    title: "Judul Proyek Anda",
-    category: "DevOps",              // DevOps | Web | Skrip Otomatis
-    status: "Selesai",
-    challenge: "Jelaskan masalah spesifik yang dihadapi...",
-    solution: "Jelaskan solusi dan keputusan arsitektur yang diambil...",
-    // ...
-  }
-];
-```
-
----
-
-## 🚀 Menjalankan Secara Lokal
-
-```powershell
-# Install semua dependensi workspace
-pnpm install
-
-# Jalankan dev server
-pnpm dev
-# Buka: http://localhost:3000
-```
-
-## 🏗️ Build Produksi
-
-```powershell
-pnpm build
-# Atau hanya untuk apps/web:
-pnpm --filter @porto/web build
-```
-
----
-
-## ☁️ Deploy ke Vercel
-
-`vercel.json` sudah dikonfigurasi. Cukup:
-1. Sambungkan repo GitHub ke [vercel.com](https://vercel.com)
-2. Klik **Deploy** — Vercel otomatis mendeteksi monorepo pnpm
-
----
-
-## 🎨 Gaya Desain
-
-| Elemen | Pilihan |
-|--------|---------|
-| **Palet Warna** | Abu-abu tua `#2A2A2A`, Biru tua `#0F3460`, Hijau lembut `#2E7D32` |
-| **Font** | Inter (Sans) + JetBrains Mono (Kode) |
-| **Kartu Proyek** | `rounded-md` (sedikit bulat) |
-| **Blok Kode** | `rounded-none` (sudut tajam teknis) |
-| **Tata Letak** | Asimetris — kartu featured mengambil 2 kolom, kartu lain 1 kolom |
-| **Dark Mode** | Toggle flash-free, tersimpan di `localStorage` |
+1. Buka `js/data.js` menggunakan VS Code / teks editor.
+2. Ubah profil di bagian `profile`: nama, bio, nomor WhatsApp, LinkedIn, email.
+3. Tambah atau ubah proyek di array `projects`:
+   - `challenge`: Tuliskan hambatan teknis yang spesifik.
+   - `solution`: Tuliskan langkah pemecahan masalah dan arsitekturnya.
+   - `codeSnippet`: Baris kode konfigurasi inti.
+4. Simpan file (`Ctrl + S`).
+5. Klik dua kali file **`update.bat`** untuk otomatis mengirim perubahan ke GitHub!

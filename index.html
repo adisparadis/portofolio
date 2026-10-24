@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Asror | Pengembang IT &amp; Praktisi DevOps</title>
+  <meta name="description" content="Portofolio IT Muhammad Asror: Otomasi server dengan Ansible, simulasi Active Directory, administrasi Linux, dan skrip keamanan.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230F3460'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+
+  <!-- Font Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Pola Grid Latar Belakang Teknis Halus -->
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      
+      <!-- Brand Identifier -->
+      <a href="#beranda" class="brand-link">
+        <div class="brand-box">&gt;_</div>
+        <div>
+          <div class="brand-title">asror<span>.lab</span></div>
+          <div class="brand-sub">DevOps &amp; Infra</div>
+        </div>
+      </a>
+
+      <!-- Menu Navigasi Desktop -->
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+          <li><a href="#proyek" class="nav-link">Proyek</a></li>
+          <li><a href="#tentang" class="nav-link">Tentang</a></li>
+          <li><a href="#keahlian" class="nav-link">Keahlian</a></li>
+          <li><a href="#kontak" class="nav-link">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action: Mode Gelap & Mobile Hamburger -->
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-btn" type="button" aria-label="Ganti Tema Gelap/Terang" title="Ganti Tema">
+          <span id="theme-icon">☽</span>
+        </button>
+
+        <button id="mobile-menu-btn" class="mobile-toggle" type="button" aria-label="Menu Ponsel">
+          ☰
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <a href="#beranda">🏠 Beranda</a>
+    <a href="#proyek">🚀 Proyek &amp; Lab</a>
+    <a href="#tentang">👤 Tentang Saya</a>
+    <a href="#keahlian">⚡ Keahlian Teknis</a>
+    <a href="#kontak">📬 Hubungi Saya</a>
+  </div>
+
+  <main class="container">
+    
+    <!-- =======================================================================
+         1. HERO SECTION: TATA LETAK ASIMETRIS (BUKAN TEMPLATE AI SIMETRIS)
+         ======================================================================= -->
+    <section class="hero-grid" id="beranda">
+      
+      <!-- Sisi Kiri: Filosofi & Pernyataan Rekayasa -->
+      <div>
+        <div class="telemetry-pill">
+          <span class="dot-status"></span>
+          <span id="telemetry-status-text">SISTEM NORMAL // TERBUKA UNTUK DISKUSI</span>
+        </div>
+
+        <h1 class="hero-title">
+          Halo, Saya <span id="hero-name">Muhammad Asror</span>.
+        </h1>
+
+        <div class="hero-role" id="hero-role">&gt; Pengembang IT &amp; Praktisi DevOps Dasar</div>
+
+        <p class="hero-desc" id="hero-statement">
+          Membangun Fondasi Infrastruktur yang Otomatis, Andal, dan Aman. Menolak konfigurasi manual yang rawan inkonsistensi.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#proyek" class="btn btn-primary">
+            <span>Eksplor Proyek &amp; Lab</span>
+            <span>→</span>
+          </a>
+          <a href="#keahlian" class="btn btn-outline">Keahlian</a>
+          <a href="#kontak" class="btn btn-secondary">Hubungi Saya</a>
+        </div>
+      </div>
+
+      <!-- Sisi Kanan: Panel Telemetri Lab Asimetris -->
+      <div class="telemetry-card">
+        <div class="telemetry-header">
+          <span>LAB_TELEMETRY.SYS</span>
+          <span style="color: var(--text-muted); font-size: 0.65rem;">UPTIME: 99.8%</span>
+        </div>
+
+        <div class="telemetry-rows">
+          <div class="telemetry-row">
+            <span>Ansible Control Node</span>
+            <span>ONLINE [v2.16]</span>
+          </div>
+          <div class="telemetry-row">
+            <span>Domain Controller DC01</span>
+            <span style="color: var(--color-primary);">ACTIVE [lab.local]</span>
+          </div>
+          <div class="telemetry-row">
+            <span>UFW &amp; Fail2ban Service</span>
+            <span>ENFORCED</span>
+          </div>
+        </div>
+
+        <div class="telemetry-stats">
+          <div class="stat-item">
+            <div class="stat-val" id="stat-projects-count">6 Lab</div>
+            <div class="stat-lbl">Proyek Selesai</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val" style="color: var(--color-accent);">160+</div>
+            <div class="stat-lbl">Jam Belajar Praktik</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- =======================================================================
+         2. SECTION PROYEK: FILTER KATEGORI, PENCARIAN & ASIMETRIS BENTO GRID
+         ======================================================================= -->
+    <section class="section" id="proyek">
+      
+      <div class="section-head">
+        <div class="section-kicker">01 // HASIL EKSEKUSI</div>
+        <h2 class="section-title">Koleksi Proyek, Otomasi &amp; Lab Praktik</h2>
+        <p class="section-desc">
+          Setiap kartu dapat dibuka untuk membaca rincian tantangan teknis yang dihadapi dan keputusan arsitektur solusinya.
+        </p>
+      </div>
+
+      <!-- Kontrol Kategori & Pencarian -->
+      <div class="project-controls">
+        <div class="filter-group">
+          <button class="filter-pill active" data-category="Semua">Semua</button>
+          <button class="filter-pill" data-category="DevOps">DevOps</button>
+          <button class="filter-pill" data-category="Web">Web</button>
+          <button class="filter-pill" data-category="Skrip Otomatis">Skrip Otomatis</button>
+        </div>
+
+        <div class="search-field">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="project-search" placeholder="Cari Ansible, GPO, Bash...">
+        </div>
+      </div>
+
+      <!-- Counter Query Status -->
+      <div id="projects-counter" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+        QUERY: [Semua] ➔ 6 proyek
+      </div>
+
+      <!-- Bento Grid Asimetris (Rendered by JS) -->
+      <div class="projects-bento" id="projects-grid">
+        <!-- Rendered dynamically -->
+      </div>
+
+    </section>
+
+    <!-- =======================================================================
+         3. SECTION TENTANG SAYA & ALASAN SUKA IT
+         ======================================================================= -->
+    <section class="section" id="tentang">
+      
+      <div class="section-head">
+        <div class="section-kicker">02 // LATAR BELAKANG &amp; FILOSOFI</div>
+        <h2 class="section-title">Tentang Saya &amp; Nilai yang Dipegang</h2>
+        <p class="section-desc" id="hero-bio">
+          Berangkat dari rasa ingin tahu terhadap arsitektur web, saya mendalami bagaimana infrastruktur di baliknya dirawat. Sehari-hari saya bereksperimen dengan Ansible, Linux, dan simulasi Active Directory.
+        </p>
+      </div>
+
+      <!-- 3 Pilar Alasan Suka Bidang IT -->
+      <div class="why-it-grid" id="why-it-container">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Roadmap Perjalanan Belajar Bertahap -->
+      <div style="margin-top: 3rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+          <h3 style="font-family: var(--font-mono); font-size: 1.05rem; font-weight: 700;">
+            // Roadmap Tahapan Belajar (Perjalanan Nyata)
+          </h3>
+          <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">
+            Status: Bertahap Aktif
+          </span>
+        </div>
+
+        <div class="timeline-list" id="timeline-container">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- =======================================================================
+         4. SECTION KEAHLIAN & MATRIKS TOOLCHAIN
+         ======================================================================= -->
+    <section class="section" id="keahlian">
+      
+      <div class="section-head">
+        <div class="section-kicker">03 // KOMPETENSI TERAPAN</div>
+        <h2 class="section-title">Keahlian &amp; Toolchain Teknis</h2>
+        <p class="section-desc">
+          Tingkat penguasaan dinilai berdasarkan implementasi langsung di lab, bukan klaim persentase kosong.
+        </p>
+      </div>
+
+      <div class="skills-grid" id="skills-container">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Keterangan Level -->
+      <div style="margin-top: 1.5rem; padding: 0.85rem; background: var(--bg-surface); border: 1px solid var(--border-color); font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">
+        <div>// INDIKATOR: <strong>Menengah</strong> = Sering dipakai di lab mandiri | <strong>Dasar</strong> = Memahami konsep konfigurasi | <strong>Sedang Dipelajari</strong> = Roadmap saat ini</div>
+      </div>
+
+    </section>
+
+    <!-- =======================================================================
+         5. SECTION KONTAK & SLA
+         ======================================================================= -->
+    <section class="section" id="kontak">
+      
+      <div class="section-head">
+        <div class="section-kicker">04 // KOMUNIKASI LANGSUNG</div>
+        <h2 class="section-title">Hubungi Saya</h2>
+        <p class="section-desc">
+          Terbuka untuk diskusi arsitektur server, masukan playbook Ansible, atau penawaran magang IT.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Kolom Kiri: SLA & Saluran Langsung -->
+        <div>
+          <!-- Banner SLA Resmi -->
+          <div class="sla-box">
+            <div style="font-family: var(--font-mono); font-weight: 700; margin-bottom: 0.25rem;">
+              ⏱ JAMINAN RESPON:
+            </div>
+            <p id="contact-sla-text">
+              Saya akan membalas pesan Anda paling lambat 3 hari kerja.
+            </p>
+          </div>
+
+          <div class="direct-channels">
+            <a href="https://wa.me/6281234567890?text=Halo%20Asror,%20saya%20melihat%20web%20portofolio%20IT%20Anda." target="_blank" rel="noopener noreferrer" class="direct-link">
+              <span>WhatsApp Chat</span>
+              <span style="color: var(--color-accent);">+62 812-3456-7890 ↗</span>
+            </a>
+
+            <a href="https://github.com/adisparadis" target="_blank" rel="noopener noreferrer" class="direct-link">
+              <span>GitHub</span>
+              <span style="color: var(--text-muted);">@adisparadis ↗</span>
+            </a>
+
+            <a href="https://linkedin.com/in/adisparadis" target="_blank" rel="noopener noreferrer" class="direct-link">
+              <span>LinkedIn</span>
+              <span style="color: #0A66C2;">in/adisparadis ↗</span>
+            </a>
+
+            <div class="direct-link" style="cursor: default;">
+              <span>Surel</span>
+              <span style="color: var(--text-muted);">asror.itdev@example.com</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: Formulir Pesan -->
+        <div>
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="c-name" class="form-label">Nama Lengkap *</label>
+              <input type="text" id="c-name" required placeholder="Nama Anda / Instansi" class="form-input">
+            </div>
+
+            <div class="form-group">
+              <label for="c-email" class="form-label">Alamat Email *</label>
+              <input type="email" id="c-email" required placeholder="nama@email.com" class="form-input">
+            </div>
+
+            <div class="form-group">
+              <label for="c-topic" class="form-label">Topik Pembahasan</label>
+              <select id="c-topic" class="form-input">
+                <option value="Tanya Proyek">Tanya Konfigurasi Proyek / Lab</option>
+                <option value="Peluang Magang">Peluang Magang / Kolaborasi IT</option>
+                <option value="Diskusi DevOps">Diskusi Seputar DevOps &amp; Linux</option>
+                <option value="Lainnya">Topik Lainnya</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="c-msg" class="form-label">Pesan Anda *</label>
+              <textarea id="c-msg" required placeholder="Tuliskan pertanyaan, tanggapan, atau detail diskusi..." class="form-input"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Kirim Pesan
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        <div>
+          <div style="font-family: var(--font-mono); font-weight: 700; font-size: 0.95rem; color: var(--text-main); margin-bottom: 0.5rem;">
+            Muhammad Asror // DevOps &amp; IT
+          </div>
+          <p style="line-height: 1.6; max-width: 360px;">
+            Portofolio dan dokumentasi perjalanan belajar IT mandiri berorientasi pada otomasi sistem, Linux, dan keamanan terstruktur.
+          </p>
+        </div>
+
+        <div>
+          <div style="font-family: var(--font-mono); font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem; text-transform: uppercase;">
+            Spesifikasi
+          </div>
+          <ul style="list-style: none; line-height: 1.8; font-family: var(--font-mono); font-size: 0.75rem;">
+            <li>• HTML5 + CSS3 + Vanilla JS</li>
+            <li>• Zero Dependencies Bloat</li>
+            <li>• GitHub Pages Native Ready</li>
+            <li>• Asymmetric Anti-Template Layout</li>
+          </ul>
+        </div>
+
+        <div>
+          <div style="font-family: var(--font-mono); font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem; text-transform: uppercase;">
+            Jaminan Respon
+          </div>
+          <p id="footer-sla-text" style="line-height: 1.6;">
+            Saya akan membalas pesan Anda paling lambat 3 hari kerja.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-btm">
+        <div>&copy; 2026 Muhammad Asror. Hak Cipta Dilindungi.</div>
+        <div>STATUS: <span style="color: var(--color-accent); font-weight: 700;">ONLINE // FAST LOAD</span></div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MODAL DETAIL SISTEM: TANTANGAN TEKNIS + PENYELESAIAN + BLOK KODE -->
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title" class="modal-title">Detail Proyek</h3>
+        <button type="button" class="modal-close" onclick="closeModal()" aria-label="Tutup Detail">✕</button>
+      </div>
+      <div id="modal-body" class="modal-body">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
